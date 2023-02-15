@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="output.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <section class="login flex flex-col space-y-10 justify-center m-44">
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
 
-        <div class="login-img">
-            <img class="w-48 m-auto" src="images/login-page-img.png" alt="logo-img">
-        </div>
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" placeholder="User name" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Sign up</button>
+				</form>
+			</div>
 
-
-<!-- login Details -->
-
-        <div class="registration-details flex flex-col space-y-6">
-            <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins  placeholder:tracking-wide" type="email" name="email"
-                id="e-mail-registration" placeholder="Email or Phone No">
-            <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide" type="password" name="" id="pass-2"
-                placeholder="Password">
-
-        </div>
-
-
-<!-- login button -->
-
-        <button class="bg-slate-800 hover:bg-gray-600 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide" type="submit">Login</button>
-
-    </section>
-
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
 </body>
 </html>
