@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,71 @@
     <link rel="stylesheet" href="style.css">
     <title>Business-Registration-Tandem</title>
 </head>
-<body>
-    
+
+<body class="bg-slate-100 font-Poppins">
+    <h1 class="text-4xl text-center my-6">Business Registration</h1>
+
+    <!-- Company details -->
+    <div class="grid grid-cols-2 text-left w-2/5 mx-auto space-y-2 bg-white p-10 rounded-lg">
+
+        <h2 class="text-2xl col-span-2 text-left my-3">Company Details</h2>
+        <p>Company Name</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="name" id="">
+        <p>Company Email</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="email" name="email" id="">
+        <p>Company Phone</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="tel" name="" id="">
+        <p>Company WebSite</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="url" name="" id="">
+        <p>Business Type</p>
+        <select id="type-signup"
+            class="bg-gray-50 text-sm rounded-md font-Poppins tracking-wide text-gray-400 focus:ring-blue-500 focus:border-blue-500 block shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] w-full h-8 m-auto">
+            <option class="text-gray-700 font-Poppins" selected>Private Limited Company</option>
+            <option class="text-gray-700 font-Poppins" selected>Public Limited Company</option>
+            <option class="text-gray-700 font-Poppins" selected>Partnerships Company</option>
+            <option class="text-gray-700 font-Poppins" selected>Limited Liability Partnership</option>
+            <option class="text-gray-700 font-Poppins" selected>One Person Company</option>
+            <option class="text-gray-700 font-Poppins" selected>Sole Proprietorship</option>
+        </select>
+        <p>Business Categary</p>
+        <select id="type-signup"
+            class="bg-gray-50 text-sm rounded-md font-Poppins tracking-wide text-gray-400 focus:ring-blue-500 focus:border-blue-500 block shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] w-full h-8 m-auto">
+            <option class="text-gray-700 font-Poppins" selected>Retail Store</option>
+            <option class="text-gray-700 font-Poppins" selected>Wholesaler</option>
+            <option class="text-gray-700 font-Poppins" selected>Consultant</option>
+            <option class="text-gray-700 font-Poppins" selected>Education</option>
+            <option class="text-gray-700 font-Poppins" selected>Service Provider</option>
+            <option class="text-gray-700 font-Poppins" selected>Financial Services Provider</option>
+            <option class="text-gray-700 font-Poppins" selected>Health services provider</option>
+            <option class="text-gray-700 font-Poppins" selected>Restaurant / Bar / Wine Store</option>
+            <option class="text-gray-700 font-Poppins" selected>Utilities</option>
+            <option class="text-gray-700 font-Poppins" selected>Travel and transport</option>
+            <option class="text-gray-700 font-Poppins" selected>Government</option>
+            <option class="text-gray-700 font-Poppins" selected>Online store / Marketplace</option>
+            <option class="text-gray-700 font-Poppins" selected>Social media</option>
+            <option class="text-gray-700 font-Poppins" selected>Charity / NGO</option>
+            <option class="text-gray-700 font-Poppins" selected>Others</option>
+        </select>
+        <p>Business Registration Number: </p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="" id="">
+        <p>Address: </p>
+        <textarea class="shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md p-2" name="Address" id="" cols="30" rows="5"></textarea>
+        <p>Zipcode: </p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="zip" id="">
+        <p>City</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="" id="">
+        <p>State</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="" id="">
+        <p>Country</p>
+        <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-full h-8 placeholder:font-Poppins  placeholder:tracking-wide" type="text" name="" id="">
+
+        <p></p>
+        <button class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-full h-9 mx-auto rounded-md font-Poppins tracking-wide" type="submit">Next</button>
+
+
+    </div>
+
+
 </body>
+
 </html>
