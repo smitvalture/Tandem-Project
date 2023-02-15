@@ -16,13 +16,17 @@
             <img class="w-40 m-auto" src="images/login-page-img.png" alt="logo-img">
         </div>
 
-        <div class="registration-details flex flex-col space-y-4">
-            <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins  placeholder:tracking-wide" type="email" name="email"
-                id="e-mail-registration" required placeholder="Email">
-            <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide" type="password" name="create_new_password" id="pass-1"
-            required placeholder="Create new Password">
-            <input class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide" type="password" name="confirm_new_password" id="pass-2"
-                placeholder="Confirm new Password" required>
+        <form action="" method="post" class="registration-details flex flex-col space-y-4">
+
+            <input
+                class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins  placeholder:tracking-wide"
+                type="email" name="email" id="e-mail-registration" required placeholder="Email">
+            <input
+                class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
+                type="password" name="create_new_password" id="pass-1" required placeholder="Create new Password">
+            <input
+                class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
+                type="password" name="confirm_new_password" id="pass-2" placeholder="Confirm new Password" required>
 
 
             <select id="type-signup" required
@@ -30,11 +34,15 @@
                 <option value="" disabled selected hidden>Signup as </option>
                 <option value="business" class="text-gray-700 font-Poppins" selected>Business</option>
             </select>
-        </div>
 
-        <button name="signip_button" class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide" type="submit">Sign up</button>
+        </form>
 
-        <a class="mx-auto hover:underline font-Poppins  text-gray-600 placeholder:tracking-wide" href="/login.html">Already have an account? Login here</a>
+        <button name="signip_button"
+            class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide"
+            type="submit">Sign up</button>
+
+        <a class="mx-auto hover:underline font-Poppins  text-gray-600 placeholder:tracking-wide"
+            href="/login.html">Already have an account? Login here</a>
 
 
     </section>
