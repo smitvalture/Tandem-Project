@@ -23,10 +23,11 @@
                 type="email" name="email" id="e-mail-registration" required placeholder="Email">
             <input
                 class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
-                type="password" name="create_new_password" id="pass-1" required placeholder="Create new Password">
+                type="password" name="password" id="password" required placeholder="Create new Password">
             <input
                 class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
-                type="password" name="confirm_new_password" id="pass-2" placeholder="Confirm new Password" required>
+                type="password" name="confirm-password" id="confirm-password" placeholder="Confirm new Password"
+                required>
 
 
             <select id="type-signup" required
@@ -35,11 +36,15 @@
                 <option value="business" class="text-gray-700 font-Poppins" selected>Business</option>
             </select>
 
-        </form>
+            <div class="mx-auto" id="error-message" style="display:none;color:red;">Passwords do not match</div>
 
-        <button name="signip_button"
+            <button name="signup_button"
             class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide"
             type="submit">Sign up</button>
+
+        </form>
+
+        
 
         <a class="mx-auto hover:underline font-Poppins  text-gray-600 placeholder:tracking-wide"
             href="/login.html">Already have an account? Login here</a>
@@ -47,6 +52,24 @@
 
     </section>
 
+    <script>
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirm-password");
+        const errorMessage = document.getElementById("error-message");
+
+        function validatePassword() {
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                errorMessage.style.display = "block";
+                confirmPasswordInput.setCustomValidity("Passwords do not match");
+            } else {
+                errorMessage.style.display = "none";
+                confirmPasswordInput.setCustomValidity("");
+            }
+        }
+
+        passwordInput.addEventListener("change", validatePassword);
+        confirmPasswordInput.addEventListener("keyup", validatePassword);
+    </script>
 </body>
 
 </html>
