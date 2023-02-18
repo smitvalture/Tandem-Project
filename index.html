@@ -12,29 +12,39 @@
 
 <body class="">
 
-    <section class="bg-[url('/images/hero_bg-1.png')]">
+    <section class="bg-[url('/images/hero_bg1.png')]">
 
-        <nav class="flex justify-between">
-            <div class="left ">
-                <ul class="flex justify-between">
-                    <li>
-                        <img src="/images/tandem_logo.svg" alt="logo-img">
-                    </li>
-                    <li>
-                        Our mission
-                    </li>
-                    <li>
-                        Live demo
-                    </li>
-                    <li>
-                        Contact us
-                    </li>
-                </ul>
-            </div>
-
-            <div class="right flex">
-                <h2>Get started</h2>
-                <button class="rounded-full text-[#1F3C88]" type="submit">Login</button>
+        <nav class="navbar sticky top-0 bg-white" id="navbar">
+            <div class="container flex">
+                <a class="navbar-brand" href="/">
+                    <img alt="company logo" src="/images/tandem_logo.svg" />
+                    
+                </a>
+                <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Open navbar menu</span>
+                    <span class="block h-1 rounded-full bg-primary"></span>
+                    <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+                    <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+                </button>
+                <div class="navbar-row" id="navbar-row">
+                    <ul class="navbar-col"></ul>
+                    <ul class="navbar-col">
+                        <li>
+                            <a class="nav-link font-semibold" href="/#">Features</a>
+                        </li>
+                        <li>
+                            <a class="nav-link font-semibold" href="/#">Pricing</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-col">
+                        <li>
+                            <a class="nav-link font-semibold" href="#">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-link btn btn-primary" href="#">Get Started ➔</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
