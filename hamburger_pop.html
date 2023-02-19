@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>menu</title>
+</head>
+<body>
+    <ul :data-headlessui-state="open ? &#x27;open&#x27;: &#x27;&#x27;"
+                            class="absolute right-0 text-gray-900 w-56 origin-top-right divide-y divide-gray-100 rounded-lg shadow-lg mt-10"
+                            x-show="open">
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Our
+                                    mission</a></li>
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Live
+                                    demo</a></li>
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Contact
+                                    us</a></li>
+                        </ul>
+</body>
+</html>

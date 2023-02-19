@@ -14,36 +14,73 @@
 
     <section class="bg-[url('/images/hero_bg1.png')]">
 
-        <nav class="navbar sticky top-0 bg-white" id="navbar">
-            <div class="container flex">
-                <a class="navbar-brand" href="/">
-                    <img alt="company logo" src="/images/tandem_logo.svg" />
-                    
-                </a>
-                <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Open navbar menu</span>
-                    <span class="block h-1 rounded-full bg-primary"></span>
-                    <span class="block h-1 mt-1 rounded-full bg-primary"></span>
-                    <span class="block h-1 mt-1 rounded-full bg-primary"></span>
-                </button>
-                <div class="navbar-row" id="navbar-row">
-                    <ul class="navbar-col"></ul>
-                    <ul class="navbar-col">
-                        <li>
-                            <a class="nav-link font-semibold" href="/#">Features</a>
-                        </li>
-                        <li>
-                            <a class="nav-link font-semibold" href="/#">Pricing</a>
-                        </li>
+        <nav class="">
+            <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="relative lg:flex grid items-center grid-cols-2 lg:grid-cols-3">
+                    <div class="flex">
+                        <a class="inline-flex items-center lg:mx-auto" href="/index.html"><img
+                                src="/images/tandem_logo.svg" alt="tanedem-img"></a>
+
+                        <ul class="items-center hidden space-x-8 lg:flex text-[#151515] font-normal ml-10">
+                            <li class=""><a
+                                    class="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400 text-gray-900"
+                                    href="#">Our mission</a></li>
+                            <li class=""><a
+                                    class="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400 text-gray-900"
+                                    href="#">Live demo</a></li>
+                            <li class=""><a
+                                    class="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400 text-gray-900"
+                                    href="#">Contact us</a></li>
+                        </ul>
+
+                    </div>
+
+                    <ul class="items-center hidden ml-auto space-x-8 lg:flex">
+                        <li class=""><a
+                                class="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400 text-gray-900"
+                                href="/sign_up.html">Get started</a></li>
+                        <li class=""><a
+                                class="inline-flex items-center justify-center h-10 w-28 px-6 font-medium tracking-wide text-[#1F3C88] transition duration-200 shadow-md hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bg-primary rounded-full border border-1 border-[#1F3C88]"
+                                href="/login.html">Log in</a></li>
                     </ul>
-                    <ul class="navbar-col">
-                        <li>
-                            <a class="nav-link font-semibold" href="#">Login</a>
-                        </li>
-                        <li>
-                            <a class="nav-link btn btn-primary" href="#">Get Started ➔</a>
-                        </li>
-                    </ul>
+                    <div :data-headlessui-state="open ? &#x27;open&#x27;: &#x27;&#x27;" x-data="{open: false}"
+                        class="relative flex justify-end lg:hidden">
+                        <div :data-headlessui-state="open ? &#x27;open&#x27;: &#x27;&#x27;"
+                            class="inline-flex justify-center rounded-md px-4 py-2 text-sm font-medium dark:text-white hover:bg-opacity-30"
+                            x-on:click="open = !open">
+                            <span class="w-5 text-gray-600">
+                                <svg class="w-5 text-gray-600" class="w-5 text-gray-600" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
+                                    </path>
+                                </svg></span>
+                        </div>
+                        <ul :data-headlessui-state="open ? &#x27;open&#x27;: &#x27;&#x27;"
+                            class="absolute right-0 text-gray-900 w-56 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg mt-10"
+                            x-show="open">
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Our
+                                    mission</a></li>
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Live
+                                    demo</a></li>
+                            <li x-data="{active: false}"
+                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
+                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Contact
+                                    us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
