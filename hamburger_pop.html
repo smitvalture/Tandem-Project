@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>menu</title>
 </head>
-<body>
-    <ul :data-headlessui-state="open ? &#x27;open&#x27;: &#x27;&#x27;"
-                            class="absolute right-0 text-gray-900 w-56 origin-top-right divide-y divide-gray-100 rounded-lg shadow-lg mt-10"
-                            x-show="open">
-                            <li x-data="{active: false}"
-                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
-                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Our
-                                    mission</a></li>
-                            <li x-data="{active: false}"
-                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
-                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Live
-                                    demo</a></li>
-                            <li x-data="{active: false}"
-                                :data-headlessui-state="active ? &#x27;active&#x27; : &#x27;&#x27;"
-                                class="group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                                x-on:mouseenter="active = true" x-on:mouseleave="active = false"><a href="#">Contact
-                                    us</a></li>
-                        </ul>
+
+<body class="bg-slate-400">
+    <section class="bg-[url('/images/hero_bg1.png')]">
+        <nav class="p-5 bg-transparent md:flex md:justify-between md:items-center">
+            <div class="flex justify-between items-center">
+                <img class="inline mx-2 h-7 md:h-auto" src="/images/tandem_logo.svg" alt="tanden-img">
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                </span>
+                <div
+                    class="md:flex md:justify-center z-[-1] md:z-auto md:static absolute bg-white md:bg-transparent w-full left-0 md:w-auto py-4 md:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+                    <ul class="md:inline-flex md:flex-row md:items-center space-x-4">
+                        <li class="my-6 md:my-0 ml-4">
+                            <a href="#" class="text-md font-medium hover:text-cyan-500 duration-500">Our mission</a>
+                        </li>
+                        <li class="my-6 md:my-0">
+                            <a href="#" class="text-md font-medium hover:text-cyan-500 duration-500">Live demo</a>
+                        </li>
+                        <li class="my-6 md:my-0">
+                            <a href="#" class="text-md font-medium hover:text-cyan-500 duration-500">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <div class="md:inline-flex md:justify-end md:items-center space-x-4 md:absolute md:right-5">
+                        <button
+                            class="w-28 h-9 font-medium text-[#1F3C88] hover:text-cyan-500 border border-1 border-[#1F3C88] hover:border-cyan-500 md:border-0 duration-500 rounded-full"
+                            name="login" type="submit">Get starter</button>
+                        <button
+                            class="w-28 h-9 font-medium text-[#1F3C88] hover:text-cyan-500 border border-1 border-[#1F3C88] hover:border-cyan-500 duration-500 rounded-full"
+                            name="login" type="submit">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <script>
+        function menu(e) {
+            e.name === 'menu-outline' ? e.name = "close-outline" : e.name = "menu-outline";    
+        }
+    </script>
+
 </body>
+
 </html>
