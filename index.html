@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/images/tdm_logo.svg" type="image/x-icon">
     <title>Tandem - Get Started</title>
+    <style>
+        html{scroll-behavior:smooth}
+    </style>
 </head>
 
 <body class="font-Poppins">
@@ -30,13 +33,13 @@
                     class="flex flex-col justify-between items-center text-center z-[-1] laptop:z-auto laptop:static absolute bg-white laptop:bg-transparent w-full left-0 laptop:w-auto py-20 laptop:py-0 opacity-0 laptop:opacity-100 top-[-400px] transition-all ease-in duration-500 shadow-laptop laptop:shadow-none">
                     <ul class="laptop:inline-flex laptop:flex-row laptop:items-center laptop:space-x-4">
                         <li class="my-6 laptop:my-0 laptop:ml-4">
-                            <a href="#" class="text-laptop font-medium hover:text-cyan-500 duration-500">Our mission</a>
+                            <a href="#mission" class="text-laptop font-medium hover:text-cyan-500 duration-500">Our mission</a>
                         </li>
                         <li class="my-6 laptop:my-0">
-                            <a href="#" class="text-laptop font-medium hover:text-cyan-500 duration-500">Live demo</a>
+                            <a href="#demo" class="text-laptop font-medium hover:text-cyan-500 duration-500">Live demo</a>
                         </li>
                         <li class="my-6 laptop:my-0">
-                            <a href="#" class="text-laptop font-medium hover:text-cyan-500 duration-500">Contact us</a>
+                            <a href="#contact" class="text-laptop font-medium hover:text-cyan-500 duration-500">Contact us</a>
                         </li>
                     </ul>
 
@@ -82,7 +85,7 @@
 
     </section>
 
-    <section class="text-[#15213A] flex flex-col justify-center items-center ">
+    <section id="mission" class="text-[#15213A] flex flex-col justify-center items-center">
         <h1 class="text-2xl laptop:text-4xl font-semibold mt-16 laptop:mt-24 ">Our mission</h1>
 
         <div class="flex flex-col laptop:flex-row items-center justify-between mt-20 laptop:mt-24 mb-20 laptop:mb-40">
@@ -146,7 +149,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col laptop:grid laptop:grid-cols-2 laptop:place-items-center justify-center items-center">
+    <section id="demo" class="flex flex-col laptop:grid laptop:grid-cols-2 laptop:place-items-center justify-center items-center">
         <div class="flex flex-col justify-center items-center laptop:ml-32">
             <div class="text-[#272746] text-center">
                 <h1 class="text-3xl laptop:text-4xl font-medium mt-[73px] laptop:mt-0">Request Live Demo</h1>
@@ -197,7 +200,7 @@
     </section>
 
 
-    <section class="flex flex-col justify-center items-center bg-[url('/images/hero_bg2.png')]">
+    <section id="contact" class="flex flex-col justify-center items-center bg-[url('/images/hero_bg2.png')]">
         <h1 class="text-3xl laptop:text-5xl font-medium laptop:font-semibold mt-24 laptop:mt-44">Reach out to Us</h1>
         <div
             class="flex flex-col laptop:flex-row justify-center items-center space-y-20 laptop:space-y-0 laptop:space-x-10 mt-14 laptop:mt-28 ">
