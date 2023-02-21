@@ -11,7 +11,9 @@
     <link rel="shortcut icon" href="/images/tdm_logo.svg" type="image/x-icon">
     <title>Tandem - Get Started</title>
     <style>
-        html{scroll-behavior:smooth}
+        html {
+            scroll-behavior: smooth
+        }
     </style>
 </head>
 
@@ -20,7 +22,8 @@
     <section class="bg-[url('/images/hero_bg1.svg')] w-full">
 
         <!-- navbar -->
-        <nav class="sticky p-5 laptop:flex laptop:justify-between laptop:items-center laptop:z-auto duration-500" id="navbar">
+        <nav class="sticky p-5 laptop:flex laptop:justify-between laptop:items-center laptop:z-auto duration-500"
+            id="navbar">
             <div class="flex justify-between items-center">
                 <a href="#"><img class="inline mx-2 h-7 laptop:h-auto" src="/images/tandem_logo.svg"
                         alt="tanden-img"></a>
@@ -33,13 +36,16 @@
                     class="flex flex-col justify-between items-center text-center z-[-1] laptop:z-auto laptop:static absolute bg-white laptop:bg-transparent w-full left-0 laptop:w-auto py-20 laptop:py-0 opacity-0 laptop:opacity-100 top-[-400px] transition-all ease-in duration-500 shadow-laptop laptop:shadow-none">
                     <ul class="laptop:inline-flex laptop:flex-row laptop:items-center laptop:space-x-4">
                         <li class="my-6 laptop:my-0 laptop:ml-4">
-                            <a href="#mission" class="text-laptop font-medium hover:text-cyan-500 duration-500">Our mission</a>
+                            <a href="#mission" class="text-laptop font-medium hover:text-cyan-500 duration-500"
+                                onclick="navclose(this)">Our mission</a>
                         </li>
                         <li class="my-6 laptop:my-0">
-                            <a href="#demo" class="text-laptop font-medium hover:text-cyan-500 duration-500">Live demo</a>
+                            <a href="#demo" class="text-laptop font-medium hover:text-cyan-500 duration-500" onclick="navclose(this)">Live
+                                demo</a>
                         </li>
                         <li class="my-6 laptop:my-0">
-                            <a href="#contact" class="text-laptop font-medium hover:text-cyan-500 duration-500">Contact us</a>
+                            <a href="#contact" class="text-laptop font-medium hover:text-cyan-500 duration-500" onclick="navclose(this)">Contact
+                                us</a>
                         </li>
                     </ul>
 
@@ -95,7 +101,8 @@
                 and exceptional customer service. We strive to simplify the payroll process and provide unparalleled
                 value to our clients, enabling them to focus on their core business objectives while achieving financial
                 stability and growth.</p>
-            <img class="w-80 h-80 laptop:w-96 laptop:h-96 mt-16 laptop:mt-auto laptop:ml-20" src="/images/our_mission_img.svg" alt="">
+            <img class="w-80 h-80 laptop:w-96 laptop:h-96 mt-16 laptop:mt-auto laptop:ml-20"
+                src="/images/our_mission_img.svg" alt="">
         </div>
     </section>
 
@@ -149,7 +156,8 @@
         </div>
     </section>
 
-    <section id="demo" class="flex flex-col laptop:grid laptop:grid-cols-2 laptop:place-items-center justify-center items-center">
+    <section id="demo"
+        class="flex flex-col laptop:grid laptop:grid-cols-2 laptop:place-items-center justify-center items-center">
         <div class="flex flex-col justify-center items-center laptop:ml-32">
             <div class="text-[#272746] text-center">
                 <h1 class="text-3xl laptop:text-4xl font-medium mt-[73px] laptop:mt-0">Request Live Demo</h1>
@@ -269,12 +277,19 @@
 
 
     <script type="text/javascript">
+        let list = document.getElementById("menu");
+        let nav = document.getElementById("navbar");
         function menu(e) {
-            let list = document.getElementById("menu");
-            let nav = document.getElementById("navbar");
 
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'), list.classList.add('block'), nav.classList.add('bg-white')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'), nav.classList.remove('bg-white'))
+
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'), list.classList.add('block'), nav.classList.add('bg-white')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'), nav.classList.remove('bg-white'));
+
         }
+
+        function navclose(a) {
+            (a.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'), nav.classList.remove('bg-white'));
+        }
+
     </script>
 
 
@@ -284,7 +299,7 @@
 <footer class="bg-[#1F3C88] pt-20 laptop:pt-10 pb-2 text-white">
     <div class="flex flex-col laptop:flex-row laptop:justify-center laptop:items-center">
         <div class="flex laptop:flex-row justify-center items-center laptop:justify-between laptop:space-x-56">
-            
+
             <div class="hidden laptop:block left flex flex-col laptop:flex laptop:flex-col">
                 <img class="w-32 mb-4" src="/images/tandem_logo_white.svg" alt="tandem-img">
                 <a href="#" class="text-[15px] font-medium">company</a>
@@ -293,7 +308,7 @@
                 <a href="#" class="text-sm font-normal">Terms &amp; Aggrement</a>
                 <a href="#" class="text-sm font-normal">Privacy</a>
             </div>
-            
+
             <div class="hidden laptop:block mid flex flex-col laptop:text-center laptop:space-y-4">
                 <p class="text-[15px] font-medium">Follow Us</p>
                 <div class="flex space-x-3">
@@ -302,7 +317,7 @@
                     <a href="#"><img class="h-6 w-6" src="/images/instagram.png" alt=""></a>
                 </div>
             </div>
-            
+
             <div class="right flex flex-col laptop:mt-20">
                 <h2 class="text-xl">Join our<br>monthly news letter</h2>
                 <input class="w-[340px] h-10 py-1 px-5 mt-5 rounded-md text-black" type="email" name="email" id=""
@@ -311,7 +326,7 @@
                     class="text-base text-white font-medium border border-1 border-[#272746] rounded-md w-44 h-10 mt-5 bg-[#272746] hover:bg-[#363662]"
                     type="submit" name="getstart">Sign up</button>
             </div>
-            
+
         </div>
 
 
@@ -338,7 +353,8 @@
     </div>
 
 
-    <p class="text-sm mt-10 text-center w-4/5 mx-auto laptop:mt-24">© 2022 Tandem, All rights reserved. Terms and Conditions ·
+    <p class="text-sm mt-10 text-center w-4/5 mx-auto laptop:mt-24">© 2022 Tandem, All rights reserved. Terms and
+        Conditions ·
         Privacy Policy · Do Not
         Sell My Personal Information</p>
 </footer>
