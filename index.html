@@ -17,7 +17,7 @@
     <section class="bg-[url('/images/hero_bg1.svg')] w-full">
 
         <!-- navbar -->
-        <nav class="sticky p-5 laptop:flex laptop:justify-between laptop:items-center laptop:z-auto">
+        <nav class="sticky p-5 laptop:flex laptop:justify-between laptop:items-center laptop:z-auto duration-500" id="navbar">
             <div class="flex justify-between items-center">
                 <a href="#"><img class="inline mx-2 h-7 laptop:h-auto" src="/images/tandem_logo.svg"
                         alt="tanden-img"></a>
@@ -27,7 +27,7 @@
 
                 <!-- List       -->
                 <div id="menu"
-                    class="flex flex-col justify-between items-center text-center z-[-10] laptop:z-auto laptop:static absolute bg-white laptop:bg-transparent w-full left-0 laptop:w-auto py-4 laptop:py-0 opacity-0 laptop:opacity-100 top-[-400px] transition-all ease-in duration-500 shadow-laptop laptop:shadow-none">
+                    class="flex flex-col justify-between items-center text-center z-[-1] laptop:z-auto laptop:static absolute bg-white laptop:bg-transparent w-full left-0 laptop:w-auto py-20 laptop:py-0 opacity-0 laptop:opacity-100 top-[-400px] transition-all ease-in duration-500 shadow-laptop laptop:shadow-none">
                     <ul class="laptop:inline-flex laptop:flex-row laptop:items-center laptop:space-x-4">
                         <li class="my-6 laptop:my-0 laptop:ml-4">
                             <a href="#" class="text-laptop font-medium hover:text-cyan-500 duration-500">Our mission</a>
@@ -268,8 +268,9 @@
     <script type="text/javascript">
         function menu(e) {
             let list = document.getElementById("menu");
+            let nav = document.getElementById("navbar");
 
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'), list.classList.add('block')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'), list.classList.add('block'), nav.classList.add('bg-white')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'), nav.classList.remove('bg-white'))
         }
     </script>
 
