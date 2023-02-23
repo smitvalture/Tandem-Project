@@ -2,50 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/images/tdm_logo.svg" type="image/x-icon">
-    <title>Login Tandem</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <title>Login Tandem</title>
 </head>
 
 <body class="bg-gray-100 font-Poppins">
-    <section class="login flex flex-col space-y-10 justify-center m-44">
+  <section class="login flex flex-col space-y-10 justify-center m-44">
+    <div class="login-img">
+      <img class="w-48 m-auto" src="images/login-page-img.png" alt="logo-img" />
+    </div>
 
-        <div class="login-img">
-            <img class="w-48 m-auto" src="images/login-page-img.png" alt="logo-img">
-        </div>
+    <!-- login Details -->
+    <form action="" method="post" class="registration-details flex flex-col space-y-6">
+      <input
+        class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
+        type="email" name="email" id="e-mail-registration" required placeholder="Email or Phone No" />
+      <input
+        class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
+        type="password" name="" id="pass-2" required placeholder="Password" />
+      <select id="type-signup" required
+        class="bg-gray-50 text-sm rounded-lg font-Poppins tracking-wide text-gray-400 focus:ring-blue-500 focus:border-blue-500 block shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] px-4 w-1/5 m-auto h-10 p-2.5">
+        <option value="" disabled selected hidden>Login as</option>
+        <option class="text-gray-700 font-Poppins" value="employee">
+          Employee
+        </option>
+        <option class="text-gray-700 font-Poppins" value="Business">
+          Business
+        </option>
+      </select>
+    </form>
 
+    <!-- login button -->
 
-        <!-- login Details -->
-        <form action="" method="post" class="registration-details flex flex-col space-y-6">
-
-            <input
-                class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins  placeholder:tracking-wide"
-                type="email" name="email" id="e-mail-registration" required placeholder="Email or Phone No">
-            <input
-                class="bg-gray-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] text-sm rounded-md px-4 w-1/5 m-auto h-10 placeholder:font-Poppins placeholder:tracking-wide"
-                type="password" name="" id="pass-2" required placeholder="Password">
-            <select id="type-signup" required
-                class="bg-gray-50 text-sm rounded-lg font-Poppins tracking-wide text-gray-400 focus:ring-blue-500 focus:border-blue-500 block shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] px-4 w-1/5 m-auto h-10 p-2.5">
-                <option value="" disabled selected hidden>Login as </option>
-                <option class="text-gray-700 font-Poppins" value="employee">Employee</option>
-                <option class="text-gray-700 font-Poppins" value="Business">Business</option>
-            </select>
-
-
-        </form>
-
-
-        <!-- login button -->
-
-        <button
-            class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide"
-            type="submit" name="login_button">Login</button>
-
-    </section>
-
+    <button class="bg-blue-600 hover:bg-slate-800 text-gray-300 w-1/5 h-9 mx-auto rounded-md font-Poppins tracking-wide"
+      type="submit" name="login_button">
+      Login
+    </button>
+  </section>
 </body>
 
 </html>
